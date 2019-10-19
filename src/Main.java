@@ -1,11 +1,33 @@
 import java.util.ArrayList;
 import java.util.List;
 
+class TestClass{
+
+
+    TestClass(){
+        System.out.println("Im Here ");
+
+    };
+
+    TestClass(String str){
+        System.out.println("Im Here " + str);
+    };
+
+
+
+    static String staticString ;
+    String nonStaticString ;
+}
+
+
 public class Main {
 
     public static void main(String[] args) {
 
-        StringsFunction();
+        TestClass test = new TestClass();
+
+        TestClass test2 = new TestClass("son");
+
     }
 
     private static void ArraysFunction(){
@@ -49,16 +71,71 @@ public class Main {
     }
 
 
+
+
+    private static void testFunction(){
+//
+
+    }
+
+
     private static void StringsFunction(){
         String firstText = "The First String";
-        String firstText2 = "The First String";
+        String firstText2 = "The first String";
         String firstText3 = "the first string";
         String secondText = "The Second String";
 
-        // ==
-        if(firstText == firstText2) System.out.println("== true");
 
-        if(firstText.equals(firstText2)) System.out.println("Equals true");
-        if(firstText.equalsIgnoreCase(firstText2)) System.out.println("Equals Case In Sensitive");
+        TestClass.staticString = "";
+
+
+
+        TestClass test = new TestClass();
+        test.nonStaticString = "";
+
+        TestClass test2 = new TestClass();
+        test2.nonStaticString = "";
+
+
+        StringsFunction();
+        // ==
+//        if(firstText == firstText2) System.out.println("== true");
+//
+//        if(firstText.equals(firstText2)) System.out.println("Equals true");
+//        if(firstText.equalsIgnoreCase(firstText2)) System.out.println("Equals Case In Sensitive");
+
+
+        String testString = new String("The First String");
+
+        if(firstText == testString){
+            System.out.println("Success");
+        }else{
+            System.out.println("Failed");
+
+        }
+
+        if(firstText.equals(testString)){
+            System.out.println("Success");
+        }else{
+            System.out.println("Failed");
+
+        }
+
+        String firstTextCopy = "The First String";
+
+
+        if(firstText == firstTextCopy){
+            System.out.println("Success");
+        }else{
+            System.out.println("Failed");
+
+        }
+
+        if(firstText.equals(firstTextCopy)){
+            System.out.println("Success");
+        }else{
+            System.out.println("Failed");
+
+        }
     }
 }
