@@ -17,6 +17,7 @@ class TestClass{
 
     static String staticString ;
     String nonStaticString ;
+    final String thefinalString = "FinalValue";
 }
 
 
@@ -25,8 +26,13 @@ public class Main {
     public static void main(String[] args) {
 
         TestClass test = new TestClass();
+        TestClass.staticString = "hello";
+        test.nonStaticString = "Hello2";
+
 
         TestClass test2 = new TestClass("son");
+
+
 
     }
 
