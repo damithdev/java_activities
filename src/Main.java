@@ -5,6 +5,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        StringsFunction();
+    }
+
+    private static void ArraysFunction(){
         System.out.println("Non-Primitive Data type Based!");
 
         List<Integer> myList = new ArrayList<>();
@@ -33,7 +37,7 @@ public class Main {
         System.out.println("Multi Dimentional Array!");
 
         int[][]  multiDimentionalArray =
-                       {{1,2,3},
+                {{1,2,3},
                         {4,5,6},
                         {7,8,9}};
 
@@ -42,5 +46,19 @@ public class Main {
                 System.out.println("Value :" + x);
             }
         }
+    }
+
+
+    private static void StringsFunction(){
+        String firstText = "The First String";
+        String firstText2 = "The First String";
+        String firstText3 = "the first string";
+        String secondText = "The Second String";
+
+        // ==
+        if(firstText == firstText2) System.out.println("== true");
+
+        if(firstText.equals(firstText2)) System.out.println("Equals true");
+        if(firstText.equalsIgnoreCase(firstText2)) System.out.println("Equals Case In Sensitive");
     }
 }
